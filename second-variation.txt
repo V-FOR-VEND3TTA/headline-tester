@@ -1,0 +1,109 @@
+HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ad Headline Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ad Headline Analyzer</h1>
+    <div class="input-section">
+      <label for="headline">Enter Your Ad Headline:</label>
+      <input type="text" id="headline" placeholder="Type your headline here...">
+      <button onclick="analyzeHeadline()">Analyze</button>
+    </div>
+    <div class="result-section" id="result">
+      <!-- Results will be displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+CSS:
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.result-section {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+
+
+JS:
+
+
+function analyzeHeadline() {
+  const headlineInput = document.getElementById('headline').value;
+  const resultSection = document.getElementById('result');
+  
+  // Sentiment Analysis Logic (This is a simple placeholder)
+  const sentimentScore = Math.random(); // Replace this with your sentiment analysis algorithm
+  
+  let sentimentText = '';
+  if (sentimentScore > 0.7) {
+    sentimentText = 'Highly Positive';
+  } else if (sentimentScore > 0.4) {
+    sentimentText = 'Positive';
+  } else if (sentimentScore > 0.2) {
+    sentimentText = 'Neutral';
+  } else {
+    sentimentText = 'Negative';
+  }
+  
+  // Display results
+  resultSection.innerHTML = `<p>Your headline: "${headlineInput}"</p><p>Sentiment: ${sentimentText}</p>`;
+  resultSection.style.display = 'block';
+}
+
+
+Please note that this example is a basic illustration, and the sentiment analysis algorithm used is a simple placeholder. In a real-world scenario, you'd need to integrate a proper sentiment analysis API or library to get accurate results.
+
+This web application allows users to enter their ad headlines in a text input field. When the "Analyze" button is clicked, the JavaScript function analyzeHeadline() is triggered. The function calculates a random sentiment score (placeholder) and displays the result (highly positive, positive, neutral, or negative) in a div below the input field.
+
+Remember to replace the placeholder sentiment analysis logic with a more robust implementation to get meaningful results. Additionally, you can expand the application to include more features like saving analyzed headlines, providing optimization tips, or using additional analysis techniques to improve ad performance.
+
+Feel free to build upon this example and tailor it to your specific needs and preferences. Good luck with your project!
+

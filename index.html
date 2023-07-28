@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Ad Headline A/B Testing</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Ad Headline A/B Testing</h1>
+    <div class="headline-container">
+      <input type="text" id="headlineA" placeholder="Enter headline A">
+      <button onclick="submitVote('A')">Vote for A</button>
+      <span id="votesA">0 votes</span>
+    </div>
+    <div class="headline-container">
+      <input type="text" id="headlineB" placeholder="Enter headline B">
+      <button onclick="submitVote('B')">Vote for B</button>
+      <span id="votesB">0 votes</span>
+    </div>
+    <h2>Winning Headline:</h2>
+    <p id="winningHeadline">None</p>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
